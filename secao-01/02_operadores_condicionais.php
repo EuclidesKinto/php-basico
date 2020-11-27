@@ -40,27 +40,9 @@
 
 <h1>Detalhes do Pedido</h1>
 
-<p>Possui o cartão da loja? -
-    <?php
-        if($usuario_possui_cartao){
-            echo 'SIM';
-        }else{
-            echo 'Não';
-        }
-
-    ?>
-</p>
+<p>Possui o cartão da loja? - <?= $usuario_possui_cartao ? 'SIM' : 'NÃO'?></p>
 <p>Valor da compra: R$<?= $valor_compra;?></p>
-<p>Recebeu desconto de frete? -
-    <?php
-    if($desconto_frete){
-        echo 'SIM';
-    }else{
-        echo 'Não';
-    }
-
-    ?>
-</p>
+<p>Recebeu desconto de frete? - <?= $desconto_frete ? 'SIM' : 'NÃO'?></p>
 <p>Valor do frete: R$<?= $frete;?></p>
 <p>Valor Total: R$<?= $total;?></p>
 
